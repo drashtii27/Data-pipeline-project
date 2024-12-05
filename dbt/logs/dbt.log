@@ -1,0 +1,2134 @@
+[0m18:22:31.689007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10486f680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10521d0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10521cda0>]}
+
+
+============================== 18:22:31.690067 | 94cd8b7f-c45e-4873-bf90-1e77894925bf ==============================
+[0m18:22:31.690067 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:22:31.690321 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'quiet': 'False', 'no_print': 'None', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'printer_width': '80', 'empty': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'invocation_command': 'dbt run', 'version_check': 'True', 'write_json': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False'}
+[0m18:22:32.419335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127a4e9f0>]}
+[0m18:22:32.436529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b7c08c0>]}
+[0m18:22:32.437005 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:22:32.464755 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:22:32.465176 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:22:32.465323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105249040>]}
+[0m18:22:32.879034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105100a10>]}
+[0m18:22:32.910548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15c3d1fa0>]}
+[0m18:22:32.910765 [info ] [MainThread]: Found 3 models, 3 sources, 459 macros
+[0m18:22:32.910904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '94cd8b7f-c45e-4873-bf90-1e77894925bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b7c2cc0>]}
+[0m18:22:32.911536 [info ] [MainThread]: 
+[0m18:22:32.911761 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:22:32.913366 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:22:32.918096 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:22:32.918235 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:22:32.918337 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:22:33.292358 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:22:33.292906 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m18:22:33.293301 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m18:22:33.293586 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m18:22:33.293948 [debug] [ThreadPool]: On list_dev: No close available on handle
+[0m18:22:33.294655 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:22:33.295017 [debug] [MainThread]: Connection 'list_dev' was properly closed.
+[0m18:22:33.295293 [info ] [MainThread]: 
+[0m18:22:33.295592 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m18:22:33.296013 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "dev"
+  Database Error
+    250001 (08001): Failed to connect to DB: MWXXFJX-HP43653.snowflakecomputing.com:443. Incorrect username or password was specified.
+[0m18:22:33.298049 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.6291751, "process_user_time": 2.761661, "process_kernel_time": 1.464073, "process_mem_max_rss": "203866112", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:22:33.298525 [debug] [MainThread]: Command `dbt run` failed at 18:22:33.298439 after 1.63 seconds
+[0m18:22:33.298829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10521d070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b7f4d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15c53e780>]}
+[0m18:22:33.299100 [debug] [MainThread]: Flushing usage events
+[0m18:23:51.585930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10310dfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d59010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d58da0>]}
+
+
+============================== 18:23:51.586991 | d210037f-35ad-47aa-b4e6-f61a6b8d99b7 ==============================
+[0m18:23:51.586991 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:23:51.587253 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'partial_parse': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'printer_width': '80', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'empty': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'static_parser': 'True', 'debug': 'False', 'no_print': 'None', 'target_path': 'None'}
+[0m18:23:52.045877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd210037f-35ad-47aa-b4e6-f61a6b8d99b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ea7bef0>]}
+[0m18:23:52.062818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd210037f-35ad-47aa-b4e6-f61a6b8d99b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16952f530>]}
+[0m18:23:52.063146 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:23:52.070266 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:23:52.115191 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:23:52.115377 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:23:52.125969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd210037f-35ad-47aa-b4e6-f61a6b8d99b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ca0d3a0>]}
+[0m18:23:52.154378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd210037f-35ad-47aa-b4e6-f61a6b8d99b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16de8c4d0>]}
+[0m18:23:52.154562 [info ] [MainThread]: Found 3 models, 3 sources, 459 macros
+[0m18:23:52.154698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd210037f-35ad-47aa-b4e6-f61a6b8d99b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16dda7200>]}
+[0m18:23:52.155343 [info ] [MainThread]: 
+[0m18:23:52.155590 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:23:52.157188 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:23:52.162558 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:23:52.162703 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:23:52.162807 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:23:52.792745 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:23:52.793501 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m18:23:52.793972 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m18:23:52.794242 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m18:23:52.794630 [debug] [ThreadPool]: On list_dev: No close available on handle
+[0m18:23:52.795618 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:23:52.796186 [debug] [MainThread]: Connection 'list_dev' was properly closed.
+[0m18:23:52.796542 [info ] [MainThread]: 
+[0m18:23:52.796920 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m18:23:52.797456 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "dev"
+  Database Error
+    250001 (08001): Failed to connect to DB: MWXXFJX-HP43653.snowflakecomputing.com:443. Incorrect username or password was specified.
+[0m18:23:52.799830 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.2350565, "process_user_time": 1.414104, "process_kernel_time": 2.490227, "process_mem_max_rss": "201129984", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:23:52.800372 [debug] [MainThread]: Command `dbt run` failed at 18:23:52.800276 after 1.24 seconds
+[0m18:23:52.800735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d58e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d58e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16e0d9fa0>]}
+[0m18:23:52.801051 [debug] [MainThread]: Flushing usage events
+[0m18:25:08.348112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b705f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a14e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a14bf0>]}
+
+
+============================== 18:25:08.349205 | ffa08860-401f-495b-894e-77fb7e5d1713 ==============================
+[0m18:25:08.349205 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:25:08.349479 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None', 'no_print': 'None', 'warn_error': 'None', 'empty': 'None', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'invocation_command': 'dbt init', 'cache_selected_only': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'static_parser': 'True', 'quiet': 'False', 'version_check': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'fail_fast': 'False', 'debug': 'False'}
+[0m18:25:08.354836 [info ] [MainThread]: Setting up your profile.
+[0m18:26:13.025071 [info ] [MainThread]: Profile l2 written to /Users/drashtibhingradiya/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:26:13.028738 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 64.7, "process_user_time": 1.085205, "process_kernel_time": 2.624234, "process_mem_max_rss": "188071936", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:26:13.029529 [debug] [MainThread]: Command `dbt init` succeeded at 18:26:13.029426 after 64.70 seconds
+[0m18:26:13.029966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e1db1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a6a6cf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ce121e0>]}
+[0m18:26:13.030370 [debug] [MainThread]: Flushing usage events
+[0m18:26:19.700144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a77260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090a1370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090a1130>]}
+
+
+============================== 18:26:19.701241 | 4532f314-eb4c-4118-a949-94f0e73218bd ==============================
+[0m18:26:19.701241 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:26:19.701505 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'debug': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'quiet': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'warn_error': 'None', 'target_path': 'None', 'empty': 'False', 'static_parser': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'fail_fast': 'False', 'no_print': 'None', 'write_json': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run'}
+[0m18:26:20.149387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15f433ef0>]}
+[0m18:26:20.166076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080b8b60>]}
+[0m18:26:20.166387 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:26:20.173255 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:26:20.218052 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:26:20.218254 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:26:20.228905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10905e7b0>]}
+[0m18:26:20.257340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15fa14830>]}
+[0m18:26:20.257544 [info ] [MainThread]: Found 3 models, 3 sources, 459 macros
+[0m18:26:20.257684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12eaf08f0>]}
+[0m18:26:20.258298 [info ] [MainThread]: 
+[0m18:26:20.258528 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:26:20.260077 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:26:20.265347 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:26:20.265475 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:26:20.265570 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:26:21.167189 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.901 seconds
+[0m18:26:21.171543 [debug] [ThreadPool]: On list_dev: Close
+[0m18:26:21.474980 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_analytics)
+[0m18:26:21.488810 [debug] [ThreadPool]: Using snowflake connection "list_dev_analytics"
+[0m18:26:21.489352 [debug] [ThreadPool]: On list_dev_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev_analytics"} */
+show objects in dev.analytics limit 10000
+[0m18:26:21.489677 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:26:22.176450 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.686 seconds
+[0m18:26:22.180856 [debug] [ThreadPool]: On list_dev_analytics: Close
+[0m18:26:22.335365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15f61aed0>]}
+[0m18:26:22.336443 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:26:22.336947 [info ] [MainThread]: 
+[0m18:26:22.342022 [debug] [Thread-1 (]: Began running node model.l2.stock_price
+[0m18:26:22.342636 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_analytics, now model.l2.stock_price)
+[0m18:26:22.343021 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price
+[0m18:26:22.350647 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price"
+[0m18:26:22.351789 [debug] [Thread-1 (]: Finished running node model.l2.stock_price
+[0m18:26:22.352100 [debug] [Thread-1 (]: Began running node model.l2.stock_price_RSI
+[0m18:26:22.352567 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.stock_price_RSI ......................... [RUN]
+[0m18:26:22.352990 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price, now model.l2.stock_price_RSI)
+[0m18:26:22.353265 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_RSI
+[0m18:26:22.354627 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_RSI"
+[0m18:26:22.355230 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_RSI
+[0m18:26:22.373007 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_RSI"
+[0m18:26:22.374187 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_RSI"
+[0m18:26:22.374418 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_RSI"} */
+create or replace transient table dev.analytics.stock_price_RSI
+         as
+        (-- models/output/stock_price_RSI.sql
+
+WITH stock_changes AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CLOSE - LAG(CLOSE, 1) OVER (PARTITION BY SYMBOL ORDER BY DATE) AS change
+    FROM lab2.raw_data.STOCK_PRICE
+),
+
+gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CASE WHEN change > 0 THEN change ELSE 0 END AS gain,
+        CASE WHEN change < 0 THEN ABS(change) ELSE 0 END AS loss
+    FROM stock_changes
+),
+
+average_gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        AVG(gain) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_gain_14d,
+        AVG(loss) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_loss_14d
+    FROM gains_losses
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    100 - (100 / (1 + NULLIF(avg_gain_14d, 0) / NULLIF(avg_loss_14d, 0))) AS rsi_14d
+FROM average_gains_losses
+        );
+[0m18:26:22.374665 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:26:23.008374 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b85b32-0003-4b9c-0003-437a000293fe
+[0m18:26:23.008810 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+[0m18:26:23.009080 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: Close
+[0m18:26:23.209113 [debug] [Thread-1 (]: Database Error in model stock_price_RSI (models/output/stock_price_RSI.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+  compiled code at target/run/l2/models/output/stock_price_RSI.sql
+[0m18:26:23.212017 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15f6ffc50>]}
+[0m18:26:23.213064 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model analytics.stock_price_RSI ................ [[31mERROR[0m in 0.86s]
+[0m18:26:23.213805 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_RSI
+[0m18:26:23.214281 [debug] [Thread-1 (]: Began running node model.l2.stock_price_avg
+[0m18:26:23.215000 [info ] [Thread-1 (]: 2 of 2 START sql table model analytics.stock_price_avg ......................... [RUN]
+[0m18:26:23.215703 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price_RSI, now model.l2.stock_price_avg)
+[0m18:26:23.216123 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_avg
+[0m18:26:23.219436 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_avg"
+[0m18:26:23.220446 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_avg
+[0m18:26:23.223128 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_avg"
+[0m18:26:23.224241 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_avg"
+[0m18:26:23.224573 [debug] [Thread-1 (]: On model.l2.stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_avg"} */
+create or replace transient table dev.analytics.stock_price_avg
+         as
+        (-- models/output/stock_price_data_avg.sql
+
+WITH stock_data AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE
+    FROM lab2.raw_data.STOCK_PRICE
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    AVG(CLOSE) OVER (
+        PARTITION BY SYMBOL
+        ORDER BY DATE
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS moving_avg_7d
+FROM stock_data
+        );
+[0m18:26:23.224887 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:26:23.840546 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b85b32-0003-4de3-0003-437a000370d2
+[0m18:26:23.841678 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+[0m18:26:23.842564 [debug] [Thread-1 (]: On model.l2.stock_price_avg: Close
+[0m18:26:24.012857 [debug] [Thread-1 (]: Database Error in model stock_price_avg (models/output/stock_price_avg.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+  compiled code at target/run/l2/models/output/stock_price_avg.sql
+[0m18:26:24.013907 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4532f314-eb4c-4118-a949-94f0e73218bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15fd2eae0>]}
+[0m18:26:24.015049 [error] [Thread-1 (]: 2 of 2 ERROR creating sql table model analytics.stock_price_avg ................ [[31mERROR[0m in 0.80s]
+[0m18:26:24.016315 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_avg
+[0m18:26:24.018499 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:26:24.018972 [debug] [MainThread]: Connection 'model.l2.stock_price_avg' was properly closed.
+[0m18:26:24.019479 [info ] [MainThread]: 
+[0m18:26:24.019978 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 3.76 seconds (3.76s).
+[0m18:26:24.020928 [debug] [MainThread]: Command end result
+[0m18:26:24.046658 [info ] [MainThread]: 
+[0m18:26:24.046995 [info ] [MainThread]: [31mCompleted with 2 errors and 0 warnings:[0m
+[0m18:26:24.047178 [info ] [MainThread]: 
+[0m18:26:24.047391 [error] [MainThread]:   Database Error in model stock_price_RSI (models/output/stock_price_RSI.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+  compiled code at target/run/l2/models/output/stock_price_RSI.sql
+[0m18:26:24.047558 [info ] [MainThread]: 
+[0m18:26:24.047744 [error] [MainThread]:   Database Error in model stock_price_avg (models/output/stock_price_avg.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'LAB2.RAW_DATA.STOCK_PRICE' does not exist or not authorized.
+  compiled code at target/run/l2/models/output/stock_price_avg.sql
+[0m18:26:24.047895 [info ] [MainThread]: 
+[0m18:26:24.048075 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=0 TOTAL=2
+[0m18:26:24.049408 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 4.369252, "process_user_time": 1.584791, "process_kernel_time": 2.604283, "process_mem_max_rss": "204242944", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:26:24.049736 [debug] [MainThread]: Command `dbt run` failed at 18:26:24.049682 after 4.37 seconds
+[0m18:26:24.049955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ab9940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b40140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086baf60>]}
+[0m18:26:24.050151 [debug] [MainThread]: Flushing usage events
+[0m18:28:59.052833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104503290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10598d2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10598d0a0>]}
+
+
+============================== 18:28:59.054476 | 3b50cb3c-c6d1-4e54-aaae-e2c556a208ce ==============================
+[0m18:28:59.054476 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:28:59.054760 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'printer_width': '80', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'invocation_command': 'dbt run', 'warn_error': 'None', 'fail_fast': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'introspect': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'use_colors': 'True', 'partial_parse': 'True', 'write_json': 'True', 'no_print': 'None', 'static_parser': 'True', 'quiet': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m18:28:59.716691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10598d010>]}
+[0m18:28:59.733596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057ab140>]}
+[0m18:28:59.734751 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:28:59.743439 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:28:59.793893 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:28:59.794056 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:28:59.804657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b6c6510>]}
+[0m18:28:59.835726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12bb148c0>]}
+[0m18:28:59.835922 [info ] [MainThread]: Found 3 models, 3 sources, 459 macros
+[0m18:28:59.836068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12bb0d1f0>]}
+[0m18:28:59.836721 [info ] [MainThread]: 
+[0m18:28:59.836968 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:28:59.838514 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:28:59.843935 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:28:59.844087 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:28:59.844193 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:29:01.076634 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.232 seconds
+[0m18:29:01.080712 [debug] [ThreadPool]: On list_dev: Close
+[0m18:29:01.244159 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_analytics)
+[0m18:29:01.257835 [debug] [ThreadPool]: Using snowflake connection "list_dev_analytics"
+[0m18:29:01.258427 [debug] [ThreadPool]: On list_dev_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_dev_analytics"} */
+show objects in dev.analytics limit 10000
+[0m18:29:01.258699 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:01.879946 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.621 seconds
+[0m18:29:01.886628 [debug] [ThreadPool]: On list_dev_analytics: Close
+[0m18:29:02.125483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b883ef0>]}
+[0m18:29:02.126565 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:29:02.127077 [info ] [MainThread]: 
+[0m18:29:02.130993 [debug] [Thread-1 (]: Began running node model.l2.stock_price
+[0m18:29:02.131671 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_analytics, now model.l2.stock_price)
+[0m18:29:02.132062 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price
+[0m18:29:02.139321 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price"
+[0m18:29:02.140213 [debug] [Thread-1 (]: Finished running node model.l2.stock_price
+[0m18:29:02.140520 [debug] [Thread-1 (]: Began running node model.l2.stock_price_RSI
+[0m18:29:02.140927 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.stock_price_RSI ......................... [RUN]
+[0m18:29:02.141246 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price, now model.l2.stock_price_RSI)
+[0m18:29:02.141481 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_RSI
+[0m18:29:02.142738 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_RSI"
+[0m18:29:02.143182 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_RSI
+[0m18:29:02.160923 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_RSI"
+[0m18:29:02.161862 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_RSI"
+[0m18:29:02.162094 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_RSI"} */
+create or replace transient table dev.analytics.stock_price_RSI
+         as
+        (-- models/output/stock_price_RSI.sql
+
+WITH stock_changes AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CLOSE - LAG(CLOSE, 1) OVER (PARTITION BY SYMBOL ORDER BY DATE) AS change
+    FROM lab2.raw_data.STOCK_PRICE
+),
+
+gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CASE WHEN change > 0 THEN change ELSE 0 END AS gain,
+        CASE WHEN change < 0 THEN ABS(change) ELSE 0 END AS loss
+    FROM stock_changes
+),
+
+average_gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        AVG(gain) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_gain_14d,
+        AVG(loss) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_loss_14d
+    FROM gains_losses
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    100 - (100 / (1 + NULLIF(avg_gain_14d, 0) / NULLIF(avg_loss_14d, 0))) AS rsi_14d
+FROM average_gains_losses
+        );
+[0m18:29:02.162290 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:03.969671 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.807 seconds
+[0m18:29:03.996744 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: Close
+[0m18:29:04.225875 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b679b20>]}
+[0m18:29:04.227035 [info ] [Thread-1 (]: 1 of 2 OK created sql table model analytics.stock_price_RSI .................... [[32mSUCCESS 1[0m in 2.08s]
+[0m18:29:04.227816 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_RSI
+[0m18:29:04.228298 [debug] [Thread-1 (]: Began running node model.l2.stock_price_avg
+[0m18:29:04.228904 [info ] [Thread-1 (]: 2 of 2 START sql table model analytics.stock_price_avg ......................... [RUN]
+[0m18:29:04.229470 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price_RSI, now model.l2.stock_price_avg)
+[0m18:29:04.229847 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_avg
+[0m18:29:04.231968 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_avg"
+[0m18:29:04.232743 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_avg
+[0m18:29:04.234852 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_avg"
+[0m18:29:04.235881 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_avg"
+[0m18:29:04.236213 [debug] [Thread-1 (]: On model.l2.stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_avg"} */
+create or replace transient table dev.analytics.stock_price_avg
+         as
+        (-- models/output/stock_price_data_avg.sql
+
+WITH stock_data AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE
+    FROM lab2.raw_data.STOCK_PRICE
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    AVG(CLOSE) OVER (
+        PARTITION BY SYMBOL
+        ORDER BY DATE
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS moving_avg_7d
+FROM stock_data
+        );
+[0m18:29:04.236503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:07.055231 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.818 seconds
+[0m18:29:07.060124 [debug] [Thread-1 (]: On model.l2.stock_price_avg: Close
+[0m18:29:07.243134 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b50cb3c-c6d1-4e54-aaae-e2c556a208ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b6ee960>]}
+[0m18:29:07.244694 [info ] [Thread-1 (]: 2 of 2 OK created sql table model analytics.stock_price_avg .................... [[32mSUCCESS 1[0m in 3.01s]
+[0m18:29:07.245860 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_avg
+[0m18:29:07.248097 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:29:07.248551 [debug] [MainThread]: Connection 'model.l2.stock_price_avg' was properly closed.
+[0m18:29:07.249074 [info ] [MainThread]: 
+[0m18:29:07.249584 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.41 seconds (7.41s).
+[0m18:29:07.250641 [debug] [MainThread]: Command end result
+[0m18:29:07.276316 [info ] [MainThread]: 
+[0m18:29:07.276649 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:29:07.276847 [info ] [MainThread]: 
+[0m18:29:07.277050 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:29:07.279174 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.248486, "process_user_time": 2.773589, "process_kernel_time": 1.507714, "process_mem_max_rss": "201146368", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:29:07.279559 [debug] [MainThread]: Command `dbt run` succeeded at 18:29:07.279499 after 8.25 seconds
+[0m18:29:07.279791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053676e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba09f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12bae6e10>]}
+[0m18:29:07.279995 [debug] [MainThread]: Flushing usage events
+[0m18:30:10.719620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ad2900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094acec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094acc50>]}
+
+
+============================== 18:30:10.721277 | c0cca962-9b14-4e14-a68c-b4d6923e7abb ==============================
+[0m18:30:10.721277 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:30:10.721547 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'debug': 'False', 'quiet': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'printer_width': '80', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'no_print': 'None', 'invocation_command': 'dbt init', 'warn_error': 'None', 'indirect_selection': 'eager', 'use_colors': 'True', 'write_json': 'True'}
+[0m18:30:10.728456 [info ] [MainThread]: Setting up your profile.
+[0m18:31:34.151157 [info ] [MainThread]: Profile l2 written to /Users/drashtibhingradiya/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:31:34.156014 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 83.45692, "process_user_time": 2.351973, "process_kernel_time": 1.39553, "process_mem_max_rss": "186482688", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:31:34.156984 [debug] [MainThread]: Command `dbt init` succeeded at 18:31:34.156850 after 83.46 seconds
+[0m18:31:34.157444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094acd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1332bf740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094953a0>]}
+[0m18:31:34.157877 [debug] [MainThread]: Flushing usage events
+[0m18:31:40.405484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f40470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109215280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109215010>]}
+
+
+============================== 18:31:40.406736 | 58ca0f09-b786-4923-8588-509c1243033c ==============================
+[0m18:31:40.406736 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:31:40.407001 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'use_colors': 'True', 'quiet': 'False', 'debug': 'False', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'cache_selected_only': 'False', 'no_print': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'empty': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'target_path': 'None', 'log_format': 'default', 'write_json': 'True', 'invocation_command': 'dbt run', 'warn_error': 'None', 'printer_width': '80', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'log_cache_events': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:31:40.922959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a836ed0>]}
+[0m18:31:40.939931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d379dc0>]}
+[0m18:31:40.941052 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:31:40.949321 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:31:40.988820 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m18:31:40.989065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108831d30>]}
+[0m18:31:41.396835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e1dfd40>]}
+[0m18:31:41.427822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d4f70e0>]}
+[0m18:31:41.428028 [info ] [MainThread]: Found 3 models, 3 sources, 459 macros
+[0m18:31:41.428168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e1df830>]}
+[0m18:31:41.428801 [info ] [MainThread]: 
+[0m18:31:41.429017 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:31:41.430621 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m18:31:41.435580 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m18:31:41.435713 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m18:31:41.435812 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:31:42.283883 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.848 seconds
+[0m18:31:42.286691 [debug] [ThreadPool]: On list_lab2: Close
+[0m18:31:42.447874 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_analytics)
+[0m18:31:42.460376 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m18:31:42.460801 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m18:31:42.461064 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:31:43.127606 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.666 seconds
+[0m18:31:43.130750 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m18:31:43.292999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d482f60>]}
+[0m18:31:43.294314 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:31:43.294886 [info ] [MainThread]: 
+[0m18:31:43.299509 [debug] [Thread-1 (]: Began running node model.l2.stock_price
+[0m18:31:43.300070 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now model.l2.stock_price)
+[0m18:31:43.300430 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price
+[0m18:31:43.307715 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price"
+[0m18:31:43.308555 [debug] [Thread-1 (]: Finished running node model.l2.stock_price
+[0m18:31:43.308856 [debug] [Thread-1 (]: Began running node model.l2.stock_price_RSI
+[0m18:31:43.309285 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.stock_price_RSI ......................... [RUN]
+[0m18:31:43.309679 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price, now model.l2.stock_price_RSI)
+[0m18:31:43.309947 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_RSI
+[0m18:31:43.311277 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_RSI"
+[0m18:31:43.311736 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_RSI
+[0m18:31:43.329497 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_RSI"
+[0m18:31:43.330476 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_RSI"
+[0m18:31:43.330703 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_RSI"} */
+create or replace transient table lab2.analytics.stock_price_RSI
+         as
+        (-- models/output/stock_price_RSI.sql
+
+WITH stock_changes AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CLOSE - LAG(CLOSE, 1) OVER (PARTITION BY SYMBOL ORDER BY DATE) AS change
+    FROM lab2.raw_data.STOCK_PRICE
+),
+
+gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        CASE WHEN change > 0 THEN change ELSE 0 END AS gain,
+        CASE WHEN change < 0 THEN ABS(change) ELSE 0 END AS loss
+    FROM stock_changes
+),
+
+average_gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        AVG(gain) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_gain_14d,
+        AVG(loss) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_loss_14d
+    FROM gains_losses
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    100 - (100 / (1 + NULLIF(avg_gain_14d, 0) / NULLIF(avg_loss_14d, 0))) AS rsi_14d
+FROM average_gains_losses
+        );
+[0m18:31:43.330911 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:31:45.379315 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.048 seconds
+[0m18:31:45.399894 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: Close
+[0m18:31:45.791140 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d379e50>]}
+[0m18:31:45.792644 [info ] [Thread-1 (]: 1 of 2 OK created sql table model analytics.stock_price_RSI .................... [[32mSUCCESS 1[0m in 2.48s]
+[0m18:31:45.793645 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_RSI
+[0m18:31:45.794284 [debug] [Thread-1 (]: Began running node model.l2.stock_price_avg
+[0m18:31:45.795104 [info ] [Thread-1 (]: 2 of 2 START sql table model analytics.stock_price_avg ......................... [RUN]
+[0m18:31:45.795741 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price_RSI, now model.l2.stock_price_avg)
+[0m18:31:45.796192 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_avg
+[0m18:31:45.799033 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_avg"
+[0m18:31:45.799925 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_avg
+[0m18:31:45.803851 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_avg"
+[0m18:31:45.804866 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_avg"
+[0m18:31:45.805208 [debug] [Thread-1 (]: On model.l2.stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_avg"} */
+create or replace transient table lab2.analytics.stock_price_avg
+         as
+        (-- models/output/stock_price_data_avg.sql
+
+WITH stock_data AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE
+    FROM lab2.raw_data.STOCK_PRICE
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    AVG(CLOSE) OVER (
+        PARTITION BY SYMBOL
+        ORDER BY DATE
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS moving_avg_7d
+FROM stock_data
+        );
+[0m18:31:45.805504 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:31:47.529679 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.723 seconds
+[0m18:31:47.536636 [debug] [Thread-1 (]: On model.l2.stock_price_avg: Close
+[0m18:31:47.698135 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '58ca0f09-b786-4923-8588-509c1243033c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e79bcb0>]}
+[0m18:31:47.699416 [info ] [Thread-1 (]: 2 of 2 OK created sql table model analytics.stock_price_avg .................... [[32mSUCCESS 1[0m in 1.90s]
+[0m18:31:47.700247 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_avg
+[0m18:31:47.701897 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:31:47.702400 [debug] [MainThread]: Connection 'model.l2.stock_price_avg' was properly closed.
+[0m18:31:47.703040 [info ] [MainThread]: 
+[0m18:31:47.703442 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 6.27 seconds (6.27s).
+[0m18:31:47.704306 [debug] [MainThread]: Command end result
+[0m18:31:47.725271 [info ] [MainThread]: 
+[0m18:31:47.725529 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:31:47.725716 [info ] [MainThread]: 
+[0m18:31:47.725911 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:31:47.727218 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.343243, "process_user_time": 2.960716, "process_kernel_time": 1.578906, "process_mem_max_rss": "205045760", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:31:47.727515 [debug] [MainThread]: Command `dbt run` succeeded at 18:31:47.727463 after 7.34 seconds
+[0m18:31:47.727713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f40470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d605af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c7b980>]}
+[0m18:31:47.727902 [debug] [MainThread]: Flushing usage events
+[0m18:51:31.991104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107700350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079d5160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079d4ef0>]}
+
+
+============================== 18:51:31.992598 | a718972b-2004-4191-9999-63b4a4cfa2ac ==============================
+[0m18:51:31.992598 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:51:31.992898 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'invocation_command': 'dbt snapshot', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'printer_width': '80', 'fail_fast': 'False', 'target_path': 'None', 'empty': 'None', 'warn_error': 'None', 'static_parser': 'True'}
+[0m18:51:32.693847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122acf4d0>]}
+[0m18:51:32.710744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049f1610>]}
+[0m18:51:32.711196 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:51:32.719654 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:51:32.770622 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m18:51:32.770880 [debug] [MainThread]: Partial parsing: added file: l2://snapshots/snapshot_stock_price_avg.sql
+[0m18:51:32.862644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131e6a0c0>]}
+[0m18:51:32.897951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x135344fe0>]}
+[0m18:51:32.898173 [info ] [MainThread]: Found 3 models, 1 snapshot, 3 sources, 459 macros
+[0m18:51:32.898321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131b1b1a0>]}
+[0m18:51:32.898971 [info ] [MainThread]: 
+[0m18:51:32.899205 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:51:32.899552 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m18:51:32.904231 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m18:51:32.904363 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m18:51:32.904461 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:51:33.955134 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.050 seconds
+[0m18:51:33.959607 [debug] [ThreadPool]: On list_lab2: Close
+[0m18:51:34.367442 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now create_lab2_snapshot)
+[0m18:51:34.369825 [debug] [ThreadPool]: Creating schema "database: "lab2"
+schema: "snapshot"
+"
+[0m18:51:34.376567 [debug] [ThreadPool]: Using snowflake connection "create_lab2_snapshot"
+[0m18:51:34.377053 [debug] [ThreadPool]: On create_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "create_lab2_snapshot"} */
+create schema if not exists lab2.snapshot
+[0m18:51:34.377322 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:51:35.081668 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.704 seconds
+[0m18:51:35.085683 [debug] [ThreadPool]: On create_lab2_snapshot: Close
+[0m18:51:35.267588 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_lab2_snapshot, now list_lab2_snapshot)
+[0m18:51:35.279304 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m18:51:35.279718 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m18:51:35.279955 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:51:35.941323 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.661 seconds
+[0m18:51:35.947258 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m18:51:36.191710 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m18:51:36.199561 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m18:51:36.200352 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m18:51:36.200711 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:51:36.822808 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.622 seconds
+[0m18:51:36.827014 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m18:51:37.005145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x135345640>]}
+[0m18:51:37.006398 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:51:37.006939 [info ] [MainThread]: 
+[0m18:51:37.011601 [debug] [Thread-1 (]: Began running node snapshot.l2.snapshot_session_summary
+[0m18:51:37.012459 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_session_summary ........................ [RUN]
+[0m18:51:37.013016 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now snapshot.l2.snapshot_session_summary)
+[0m18:51:37.013423 [debug] [Thread-1 (]: Began compiling node snapshot.l2.snapshot_session_summary
+[0m18:51:37.070424 [debug] [Thread-1 (]: Began executing node snapshot.l2.snapshot_session_summary
+[0m18:51:37.090031 [debug] [Thread-1 (]: Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:51:37.090704 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a718972b-2004-4191-9999-63b4a4cfa2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ff2fc0>]}
+[0m18:51:37.091049 [error] [Thread-1 (]: 1 of 1 ERROR snapshotting snapshot.snapshot_session_summary .................... [[31mERROR[0m in 0.08s]
+[0m18:51:37.091315 [debug] [Thread-1 (]: Finished running node snapshot.l2.snapshot_session_summary
+[0m18:51:37.091862 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:51:37.091993 [debug] [MainThread]: Connection 'snapshot.l2.snapshot_session_summary' was properly closed.
+[0m18:51:37.092109 [info ] [MainThread]: 
+[0m18:51:37.092232 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 4.19 seconds (4.19s).
+[0m18:51:37.092486 [debug] [MainThread]: Command end result
+[0m18:51:37.102686 [info ] [MainThread]: 
+[0m18:51:37.102855 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:51:37.102967 [info ] [MainThread]: 
+[0m18:51:37.103110 [error] [MainThread]:   Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:51:37.103253 [info ] [MainThread]: 
+[0m18:51:37.103364 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m18:51:37.104890 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_wall_clock_time": 5.136365, "process_user_time": 3.456959, "process_kernel_time": 0.968611, "process_mem_max_rss": "206372864", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:51:37.105082 [debug] [MainThread]: Command `dbt snapshot` failed at 18:51:37.105047 after 5.14 seconds
+[0m18:51:37.105212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107468230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x135604260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131de6e40>]}
+[0m18:51:37.105332 [debug] [MainThread]: Flushing usage events
+[0m18:55:51.411656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e0500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079b51c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079b4f50>]}
+
+
+============================== 18:55:51.413267 | 5e4858d7-9826-4e75-9ef8-a428aa9686da ==============================
+[0m18:55:51.413267 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:55:51.413542 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'fail_fast': 'False', 'log_format': 'default', 'empty': 'False', 'debug': 'False', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'indirect_selection': 'eager', 'static_parser': 'True', 'introspect': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'quiet': 'False', 'invocation_command': 'dbt run', 'warn_error': 'None'}
+[0m18:55:52.102856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13c8b5160>]}
+[0m18:55:52.119615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13be66990>]}
+[0m18:55:52.120746 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:55:52.129249 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:55:52.185421 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m18:55:52.185698 [debug] [MainThread]: Partial parsing: updated file: l2://models/output/stock_price_avg.sql
+[0m18:55:52.185849 [debug] [MainThread]: Partial parsing: updated file: l2://models/output/stock_price_RSI.sql
+[0m18:55:52.269115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ea85970>]}
+[0m18:55:52.304300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ee1d0d0>]}
+[0m18:55:52.304492 [info ] [MainThread]: Found 3 models, 1 snapshot, 3 sources, 459 macros
+[0m18:55:52.304631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ee39790>]}
+[0m18:55:52.305272 [info ] [MainThread]: 
+[0m18:55:52.305505 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:55:52.307042 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m18:55:52.311731 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m18:55:52.311862 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m18:55:52.311962 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:52.927983 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.615 seconds
+[0m18:55:52.931486 [debug] [ThreadPool]: On list_lab2: Close
+[0m18:55:53.130013 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_snapshot)
+[0m18:55:53.143735 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m18:55:53.144312 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m18:55:53.144630 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:55:54.135649 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.991 seconds
+[0m18:55:54.141083 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m18:55:54.327744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m18:55:54.333170 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m18:55:54.333833 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m18:55:54.334345 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:55:54.936483 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.602 seconds
+[0m18:55:54.941668 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m18:55:55.104751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e8c5910>]}
+[0m18:55:55.105916 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:55:55.106432 [info ] [MainThread]: 
+[0m18:55:55.111382 [debug] [Thread-1 (]: Began running node model.l2.stock_price
+[0m18:55:55.112049 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now model.l2.stock_price)
+[0m18:55:55.112466 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price
+[0m18:55:55.120692 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price"
+[0m18:55:55.121819 [debug] [Thread-1 (]: Finished running node model.l2.stock_price
+[0m18:55:55.122177 [debug] [Thread-1 (]: Began running node model.l2.stock_price_RSI
+[0m18:55:55.122640 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.stock_price_RSI ......................... [RUN]
+[0m18:55:55.123019 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price, now model.l2.stock_price_RSI)
+[0m18:55:55.123284 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_RSI
+[0m18:55:55.124486 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_RSI"
+[0m18:55:55.124964 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_RSI
+[0m18:55:55.180981 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_RSI"
+[0m18:55:55.182033 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_RSI"
+[0m18:55:55.182231 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_RSI"} */
+create or replace transient table lab2.analytics.stock_price_RSI
+         as
+        (WITH stock_changes AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        CLOSE - LAG(CLOSE, 1) OVER (PARTITION BY SYMBOL ORDER BY DATE) AS change
+    FROM lab2.raw_data.STOCK_PRICE
+),
+
+gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        CASE WHEN change > 0 THEN change ELSE 0 END AS gain,
+        CASE WHEN change < 0 THEN ABS(change) ELSE 0 END AS loss
+    FROM stock_changes
+),
+
+average_gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        MAX(TIMESTAMP) OVER (PARTITION BY SYMBOL) AS max_timestamp,
+        ROW_NUMBER() OVER (ORDER BY SYMBOL, DATE) AS id,
+        AVG(gain) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_gain_14d,
+        AVG(loss) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_loss_14d
+    FROM gains_losses
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    TIMESTAMP,
+    max_timestamp,
+    id,
+    100 - (100 / (1 + NULLIF(avg_gain_14d, 0) / NULLIF(avg_loss_14d, 0))) AS rsi_14d
+FROM average_gains_losses
+        );
+[0m18:55:55.182390 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:55:57.639401 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.456 seconds
+[0m18:55:57.667012 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: Close
+[0m18:55:57.934955 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e0d40>]}
+[0m18:55:57.936614 [info ] [Thread-1 (]: 1 of 2 OK created sql table model analytics.stock_price_RSI .................... [[32mSUCCESS 1[0m in 2.81s]
+[0m18:55:57.937591 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_RSI
+[0m18:55:57.938240 [debug] [Thread-1 (]: Began running node model.l2.stock_price_avg
+[0m18:55:57.939066 [info ] [Thread-1 (]: 2 of 2 START sql table model analytics.stock_price_avg ......................... [RUN]
+[0m18:55:57.939772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price_RSI, now model.l2.stock_price_avg)
+[0m18:55:57.940232 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_avg
+[0m18:55:57.942184 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_avg"
+[0m18:55:57.943806 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_avg
+[0m18:55:57.946131 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_avg"
+[0m18:55:57.947212 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_avg"
+[0m18:55:57.947535 [debug] [Thread-1 (]: On model.l2.stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "model.l2.stock_price_avg"} */
+create or replace transient table lab2.analytics.stock_price_avg
+         as
+        (WITH stock_data AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP
+    FROM lab2.raw_data.STOCK_PRICE
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    TIMESTAMP,
+    MAX(TIMESTAMP) OVER (PARTITION BY SYMBOL) AS max_timestamp,
+    ROW_NUMBER() OVER (ORDER BY SYMBOL, DATE) AS id,
+    AVG(CLOSE) OVER (
+        PARTITION BY SYMBOL
+        ORDER BY DATE
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS moving_avg_7d
+FROM stock_data
+        );
+[0m18:55:57.947830 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:55:59.890897 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.942 seconds
+[0m18:55:59.896446 [debug] [Thread-1 (]: On model.l2.stock_price_avg: Close
+[0m18:56:00.106367 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5e4858d7-9826-4e75-9ef8-a428aa9686da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ed0f080>]}
+[0m18:56:00.108069 [info ] [Thread-1 (]: 2 of 2 OK created sql table model analytics.stock_price_avg .................... [[32mSUCCESS 1[0m in 2.17s]
+[0m18:56:00.109041 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_avg
+[0m18:56:00.111183 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:56:00.111625 [debug] [MainThread]: Connection 'model.l2.stock_price_avg' was properly closed.
+[0m18:56:00.112136 [info ] [MainThread]: 
+[0m18:56:00.112584 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.81 seconds (7.81s).
+[0m18:56:00.113528 [debug] [MainThread]: Command end result
+[0m18:56:00.137793 [info ] [MainThread]: 
+[0m18:56:00.138181 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:56:00.138394 [info ] [MainThread]: 
+[0m18:56:00.138612 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:56:00.140671 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.7526455, "process_user_time": 3.219615, "process_kernel_time": 1.250195, "process_mem_max_rss": "203816960", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:56:00.140996 [debug] [MainThread]: Command `dbt run` succeeded at 18:56:00.140940 after 8.75 seconds
+[0m18:56:00.141222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076245c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10741b980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e87d250>]}
+[0m18:56:00.141421 [debug] [MainThread]: Flushing usage events
+[0m18:57:47.833694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e8deb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107161070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107160e00>]}
+
+
+============================== 18:57:47.834773 | 2d6d51d3-7233-4ab1-9f29-eef39b76c1c8 ==============================
+[0m18:57:47.834773 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:57:47.835027 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'log_format': 'default', 'quiet': 'False', 'cache_selected_only': 'False', 'version_check': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'static_parser': 'True', 'warn_error': 'None', 'invocation_command': 'dbt snapshot', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'write_json': 'True', 'no_print': 'None', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'debug': 'False', 'use_colors': 'True'}
+[0m18:57:48.289435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13b9378f0>]}
+[0m18:57:48.306323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13b84ae10>]}
+[0m18:57:48.306688 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:57:48.313636 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:57:48.364346 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:57:48.364527 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:57:48.378839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13b937800>]}
+[0m18:57:48.411987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13bd2b380>]}
+[0m18:57:48.412198 [info ] [MainThread]: Found 3 models, 1 snapshot, 3 sources, 459 macros
+[0m18:57:48.412356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061363f0>]}
+[0m18:57:48.412977 [info ] [MainThread]: 
+[0m18:57:48.413223 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:57:48.413599 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m18:57:48.419127 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m18:57:48.419272 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m18:57:48.419383 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:57:49.258835 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.839 seconds
+[0m18:57:49.262237 [debug] [ThreadPool]: On list_lab2: Close
+[0m18:57:49.420804 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_snapshot)
+[0m18:57:49.431954 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m18:57:49.432374 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m18:57:49.432637 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:57:49.976033 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.543 seconds
+[0m18:57:49.979324 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m18:57:50.168392 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m18:57:50.174409 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m18:57:50.174966 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m18:57:50.175301 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:57:50.998633 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.823 seconds
+[0m18:57:51.002967 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m18:57:51.154652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13bd2bfb0>]}
+[0m18:57:51.155981 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:57:51.156572 [info ] [MainThread]: 
+[0m18:57:51.160417 [debug] [Thread-1 (]: Began running node snapshot.l2.snapshot_session_summary
+[0m18:57:51.161278 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_session_summary ........................ [RUN]
+[0m18:57:51.161917 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now snapshot.l2.snapshot_session_summary)
+[0m18:57:51.162336 [debug] [Thread-1 (]: Began compiling node snapshot.l2.snapshot_session_summary
+[0m18:57:51.171439 [debug] [Thread-1 (]: Began executing node snapshot.l2.snapshot_session_summary
+[0m18:57:51.199833 [debug] [Thread-1 (]: Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:57:51.200697 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2d6d51d3-7233-4ab1-9f29-eef39b76c1c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13bf388c0>]}
+[0m18:57:51.201154 [error] [Thread-1 (]: 1 of 1 ERROR snapshotting snapshot.snapshot_session_summary .................... [[31mERROR[0m in 0.04s]
+[0m18:57:51.201488 [debug] [Thread-1 (]: Finished running node snapshot.l2.snapshot_session_summary
+[0m18:57:51.202143 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:57:51.202336 [debug] [MainThread]: Connection 'snapshot.l2.snapshot_session_summary' was properly closed.
+[0m18:57:51.202493 [info ] [MainThread]: 
+[0m18:57:51.202654 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 2.79 seconds (2.79s).
+[0m18:57:51.202965 [debug] [MainThread]: Command end result
+[0m18:57:51.216383 [info ] [MainThread]: 
+[0m18:57:51.216584 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:57:51.216707 [info ] [MainThread]: 
+[0m18:57:51.216871 [error] [MainThread]:   Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:57:51.217004 [info ] [MainThread]: 
+[0m18:57:51.217136 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m18:57:51.218165 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_wall_clock_time": 3.4046717, "process_user_time": 1.562105, "process_kernel_time": 2.632568, "process_mem_max_rss": "204505088", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:57:51.218415 [debug] [MainThread]: Command `dbt snapshot` failed at 18:57:51.218376 after 3.40 seconds
+[0m18:57:51.218590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c8a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bcba70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ec0a690>]}
+[0m18:57:51.218737 [debug] [MainThread]: Flushing usage events
+[0m18:58:03.911824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d634a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c0cf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c0cd40>]}
+
+
+============================== 18:58:03.912899 | 90362d4a-8cd1-4832-8c7e-d439889e7316 ==============================
+[0m18:58:03.912899 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:58:03.913158 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'empty': 'None', 'warn_error': 'None', 'static_parser': 'True', 'log_format': 'default', 'partial_parse': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'invocation_command': 'dbt clean', 'introspect': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'quiet': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'fail_fast': 'False', 'write_json': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt'}
+[0m18:58:03.959302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '90362d4a-8cd1-4832-8c7e-d439889e7316', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c0f530>]}
+[0m18:58:03.965357 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": true, "command_wall_clock_time": 0.07402146, "process_user_time": 0.536516, "process_kernel_time": 0.086434, "process_mem_max_rss": "108642304", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:58:03.965647 [debug] [MainThread]: Command `dbt clean` succeeded at 18:58:03.965611 after 0.07 seconds
+[0m18:58:03.965804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10896b6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c0d010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c0d0a0>]}
+[0m18:58:03.965939 [debug] [MainThread]: Flushing usage events
+[0m18:58:06.860189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a66e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054b1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054b1010>]}
+
+
+============================== 18:58:06.861260 | b7264ec0-08d4-44e4-8dc3-7f24cd1687a2 ==============================
+[0m18:58:06.861260 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:58:06.861515 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt snapshot', 'indirect_selection': 'eager', 'no_print': 'None', 'debug': 'False', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'empty': 'None', 'write_json': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_format': 'default', 'printer_width': '80', 'use_colors': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'profiles_dir': '/Users/drashtibhingradiya/.dbt'}
+[0m18:58:07.304397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139483f80>]}
+[0m18:58:07.321261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x138ee1af0>]}
+[0m18:58:07.321583 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m18:58:07.328800 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m18:58:07.329210 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:58:07.329369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13943bfb0>]}
+[0m18:58:07.793434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1394fd4c0>]}
+[0m18:58:07.824795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13971dc70>]}
+[0m18:58:07.824985 [info ] [MainThread]: Found 3 models, 1 snapshot, 3 sources, 459 macros
+[0m18:58:07.825119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13940c530>]}
+[0m18:58:07.825698 [info ] [MainThread]: 
+[0m18:58:07.825919 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:58:07.826322 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m18:58:07.831275 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m18:58:07.831427 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m18:58:07.831531 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:58:08.510444 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.678 seconds
+[0m18:58:08.516340 [debug] [ThreadPool]: On list_lab2: Close
+[0m18:58:08.925276 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_snapshot)
+[0m18:58:08.934210 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m18:58:08.934539 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m18:58:08.934781 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:58:09.657815 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.723 seconds
+[0m18:58:09.664042 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m18:58:09.844439 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m18:58:09.848586 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m18:58:09.849010 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m18:58:09.849338 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:58:10.232383 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.383 seconds
+[0m18:58:10.238731 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m18:58:10.415266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1397391f0>]}
+[0m18:58:10.416454 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:58:10.417017 [info ] [MainThread]: 
+[0m18:58:10.420077 [debug] [Thread-1 (]: Began running node snapshot.l2.snapshot_session_summary
+[0m18:58:10.420778 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_session_summary ........................ [RUN]
+[0m18:58:10.421326 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now snapshot.l2.snapshot_session_summary)
+[0m18:58:10.421693 [debug] [Thread-1 (]: Began compiling node snapshot.l2.snapshot_session_summary
+[0m18:58:10.429267 [debug] [Thread-1 (]: Began executing node snapshot.l2.snapshot_session_summary
+[0m18:58:10.454800 [debug] [Thread-1 (]: Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:58:10.455707 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7264ec0-08d4-44e4-8dc3-7f24cd1687a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139cd7980>]}
+[0m18:58:10.456148 [error] [Thread-1 (]: 1 of 1 ERROR snapshotting snapshot.snapshot_session_summary .................... [[31mERROR[0m in 0.03s]
+[0m18:58:10.456476 [debug] [Thread-1 (]: Finished running node snapshot.l2.snapshot_session_summary
+[0m18:58:10.457133 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:58:10.457303 [debug] [MainThread]: Connection 'snapshot.l2.snapshot_session_summary' was properly closed.
+[0m18:58:10.457457 [info ] [MainThread]: 
+[0m18:58:10.457624 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 2.63 seconds (2.63s).
+[0m18:58:10.457940 [debug] [MainThread]: Command end result
+[0m18:58:10.471361 [info ] [MainThread]: 
+[0m18:58:10.471563 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:58:10.471688 [info ] [MainThread]: 
+[0m18:58:10.471851 [error] [MainThread]:   Compilation Error in snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+  The specified strategy macro 'TIMESTAMP' was not found in package 'None'
+  
+  > in macro strategy_dispatch (macros/materializations/snapshots/strategies.sql)
+  > called by macro materialization_snapshot_default (macros/materializations/snapshots/snapshot.sql)
+  > called by macro materialization_snapshot_snowflake (macros/materializations/snapshot.sql)
+  > called by snapshot snapshot_session_summary (snapshots/snapshot_stock_price_avg.sql)
+[0m18:58:10.471990 [info ] [MainThread]: 
+[0m18:58:10.472123 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m18:58:10.473158 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_wall_clock_time": 3.6333358, "process_user_time": 1.957945, "process_kernel_time": 2.613948, "process_mem_max_rss": "207224832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:58:10.473408 [debug] [MainThread]: Command `dbt snapshot` failed at 18:58:10.473367 after 3.63 seconds
+[0m18:58:10.473580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139833bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054b10d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054b1250>]}
+[0m18:58:10.473734 [debug] [MainThread]: Flushing usage events
+[0m19:00:10.946319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10958fb00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098610a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109860e30>]}
+
+
+============================== 19:00:10.947417 | 03baa4af-9524-4967-a3bd-a987d051dab3 ==============================
+[0m19:00:10.947417 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:00:10.947675 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt snapshot', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'log_format': 'default', 'warn_error': 'None', 'target_path': 'None', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'partial_parse': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'static_parser': 'True', 'quiet': 'False', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'no_print': 'None'}
+[0m19:00:11.398560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c40e930>]}
+[0m19:00:11.415366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dfc4500>]}
+[0m19:00:11.415709 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m19:00:11.422975 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:00:11.473567 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:00:11.473827 [debug] [MainThread]: Partial parsing: updated file: l2://snapshots/snapshot_stock_price_avg.sql
+[0m19:00:11.560116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e2e9550>]}
+[0m19:00:11.592031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e545040>]}
+[0m19:00:11.592214 [info ] [MainThread]: Found 3 models, 1 snapshot, 3 sources, 459 macros
+[0m19:00:11.592355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e5788f0>]}
+[0m19:00:11.592939 [info ] [MainThread]: 
+[0m19:00:11.593171 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:00:11.593517 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m19:00:11.598180 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m19:00:11.598322 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m19:00:11.598422 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:00:12.352786 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.754 seconds
+[0m19:00:12.357424 [debug] [ThreadPool]: On list_lab2: Close
+[0m19:00:12.538299 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_snapshot)
+[0m19:00:12.548678 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m19:00:12.549184 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m19:00:12.549461 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:00:13.401630 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.852 seconds
+[0m19:00:13.405624 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m19:00:13.595116 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m19:00:13.600194 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m19:00:13.600822 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m19:00:13.601233 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:00:14.360361 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.759 seconds
+[0m19:00:14.364308 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m19:00:14.771872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e5796d0>]}
+[0m19:00:14.773082 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:00:14.773586 [info ] [MainThread]: 
+[0m19:00:14.776057 [debug] [Thread-1 (]: Began running node snapshot.l2.snapshot_stock_price_avg
+[0m19:00:14.776643 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_stock_price_avg ........................ [RUN]
+[0m19:00:14.777082 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now snapshot.l2.snapshot_stock_price_avg)
+[0m19:00:14.777430 [debug] [Thread-1 (]: Began compiling node snapshot.l2.snapshot_stock_price_avg
+[0m19:00:14.785270 [debug] [Thread-1 (]: Began executing node snapshot.l2.snapshot_stock_price_avg
+[0m19:00:14.860769 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m19:00:14.861041 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(id as varchar ), '')
+         || '|' || coalesce(cast(timestamp as varchar ), '')
+        ) as dbt_scd_id,
+        timestamp as dbt_updated_at,
+        timestamp as dbt_valid_from,
+        
+  
+  coalesce(nullif(timestamp, timestamp), null)
+  as dbt_valid_to
+
+    from (
+        
+
+  
+
+SELECT * FROM lab2.analytics.stock_price_avg
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m19:00:14.861186 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:00:16.202632 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 1.341 seconds
+[0m19:00:16.214464 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m19:00:16.215137 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m19:00:16.409015 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.193 seconds
+[0m19:00:16.411552 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.l2.snapshot_stock_price_avg"
+[0m19:00:16.415731 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m19:00:16.416271 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+create or replace transient table lab2.snapshot.snapshot_stock_price_avg
+         as
+        (
+    
+
+    select *,
+        md5(coalesce(cast(id as varchar ), '')
+         || '|' || coalesce(cast(timestamp as varchar ), '')
+        ) as dbt_scd_id,
+        timestamp as dbt_updated_at,
+        timestamp as dbt_valid_from,
+        
+  
+  coalesce(nullif(timestamp, timestamp), null)
+  as dbt_valid_to
+
+    from (
+        
+
+  
+
+SELECT * FROM lab2.analytics.stock_price_avg
+
+    ) sbq
+
+
+
+        );
+[0m19:00:18.149338 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.732 seconds
+[0m19:00:18.177015 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: Close
+[0m19:00:18.332968 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03baa4af-9524-4967-a3bd-a987d051dab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e7af60>]}
+[0m19:00:18.335023 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshot.snapshot_stock_price_avg ........................ [[32mSUCCESS 1[0m in 3.55s]
+[0m19:00:18.336172 [debug] [Thread-1 (]: Finished running node snapshot.l2.snapshot_stock_price_avg
+[0m19:00:18.338092 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:00:18.338442 [debug] [MainThread]: Connection 'snapshot.l2.snapshot_stock_price_avg' was properly closed.
+[0m19:00:18.338778 [info ] [MainThread]: 
+[0m19:00:18.339284 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 6.75 seconds (6.75s).
+[0m19:00:18.340276 [debug] [MainThread]: Command end result
+[0m19:00:18.362495 [info ] [MainThread]: 
+[0m19:00:18.362777 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:00:18.362955 [info ] [MainThread]: 
+[0m19:00:18.363126 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:00:18.364434 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 7.437836, "process_user_time": 1.767664, "process_kernel_time": 2.576432, "process_mem_max_rss": "206241792", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:00:18.364730 [debug] [MainThread]: Command `dbt snapshot` succeeded at 19:00:18.364677 after 7.44 seconds
+[0m19:00:18.364945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108884e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e22a660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e22bc50>]}
+[0m19:00:18.365139 [debug] [MainThread]: Flushing usage events
+[0m19:02:58.939863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a446e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d107d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d20ec0>]}
+
+
+============================== 19:02:58.941047 | 1998ecbf-a54d-4cf7-97cb-c534d9a91869 ==============================
+[0m19:02:58.941047 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:02:58.941310 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt test', 'quiet': 'False', 'log_format': 'default', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'fail_fast': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'use_colors': 'True', 'printer_width': '80', 'no_print': 'None', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'version_check': 'True', 'warn_error': 'None', 'empty': 'None', 'indirect_selection': 'eager'}
+[0m19:02:59.393343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e9ee0c0>]}
+[0m19:02:59.410303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a732cf0>]}
+[0m19:02:59.410637 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m19:02:59.417734 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:02:59.468828 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m19:02:59.469081 [debug] [MainThread]: Partial parsing: added file: l2://models/schema.yml
+[0m19:02:59.561436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13eec4e30>]}
+[0m19:02:59.604716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f95a9f0>]}
+[0m19:02:59.604918 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 3 sources, 459 macros
+[0m19:02:59.605059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13eae37a0>]}
+[0m19:02:59.605716 [info ] [MainThread]: 
+[0m19:02:59.605970 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:02:59.607583 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2_snapshot'
+[0m19:02:59.613480 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m19:02:59.613621 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m19:02:59.613732 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:03:00.557580 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.943 seconds
+[0m19:03:00.563418 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m19:03:00.807974 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m19:03:00.811489 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m19:03:00.811919 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m19:03:00.812221 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:03:01.480227 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.668 seconds
+[0m19:03:01.483884 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m19:03:01.788630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1998ecbf-a54d-4cf7-97cb-c534d9a91869', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ee3bad0>]}
+[0m19:03:01.790079 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:03:01.790703 [info ] [MainThread]: 
+[0m19:03:01.794297 [debug] [Thread-1 (]: Began running node test.l2.not_null_stock_price_id.bd5f7e846d
+[0m19:03:01.794899 [info ] [Thread-1 (]: 1 of 2 START test not_null_stock_price_id ...................................... [RUN]
+[0m19:03:01.795461 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now test.l2.not_null_stock_price_id.bd5f7e846d)
+[0m19:03:01.795883 [debug] [Thread-1 (]: Began compiling node test.l2.not_null_stock_price_id.bd5f7e846d
+[0m19:03:01.814271 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.not_null_stock_price_id.bd5f7e846d"
+[0m19:03:01.816107 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.not_null_stock_price_id.bd5f7e846d"
+[0m19:03:01.816694 [debug] [Thread-1 (]: Began executing node test.l2.not_null_stock_price_id.bd5f7e846d
+[0m19:03:01.829838 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.not_null_stock_price_id.bd5f7e846d"
+[0m19:03:01.830679 [debug] [Thread-1 (]: Using snowflake connection "test.l2.not_null_stock_price_id.bd5f7e846d"
+[0m19:03:01.830906 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_id.bd5f7e846d: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "test.l2.not_null_stock_price_id.bd5f7e846d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+with __dbt__cte__stock_price as (
+SELECT 
+    * 
+FROMlab2.raw_data.stock_price
+) select id
+from __dbt__cte__stock_price
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:03:01.831094 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:03:02.511610 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b85b57-0003-4a57-0000-0003437a4579
+[0m19:03:02.512439 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 15 at position 0 unexpected 'FROMlab2'.
+syntax error line 23 at position 4 unexpected ')'.
+[0m19:03:02.513054 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_id.bd5f7e846d: Close
+[0m19:03:02.700019 [debug] [Thread-1 (]: Database Error in test not_null_stock_price_id (models/schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 0 unexpected 'FROMlab2'.
+  syntax error line 23 at position 4 unexpected ')'.
+  compiled code at target/run/l2/models/schema.yml/not_null_stock_price_id.sql
+[0m19:03:02.700565 [error] [Thread-1 (]: 1 of 2 ERROR not_null_stock_price_id ........................................... [[31mERROR[0m in 0.91s]
+[0m19:03:02.701024 [debug] [Thread-1 (]: Finished running node test.l2.not_null_stock_price_id.bd5f7e846d
+[0m19:03:02.701368 [debug] [Thread-1 (]: Began running node test.l2.unique_stock_price_id.d7c6f6d1d3
+[0m19:03:02.701790 [info ] [Thread-1 (]: 2 of 2 START test unique_stock_price_id ........................................ [RUN]
+[0m19:03:02.702242 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.l2.not_null_stock_price_id.bd5f7e846d, now test.l2.unique_stock_price_id.d7c6f6d1d3)
+[0m19:03:02.702525 [debug] [Thread-1 (]: Began compiling node test.l2.unique_stock_price_id.d7c6f6d1d3
+[0m19:03:02.709022 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.unique_stock_price_id.d7c6f6d1d3"
+[0m19:03:02.709537 [debug] [Thread-1 (]: Began executing node test.l2.unique_stock_price_id.d7c6f6d1d3
+[0m19:03:02.711035 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.unique_stock_price_id.d7c6f6d1d3"
+[0m19:03:02.711722 [debug] [Thread-1 (]: Using snowflake connection "test.l2.unique_stock_price_id.d7c6f6d1d3"
+[0m19:03:02.711939 [debug] [Thread-1 (]: On test.l2.unique_stock_price_id.d7c6f6d1d3: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "test.l2.unique_stock_price_id.d7c6f6d1d3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with __dbt__cte__stock_price as (
+SELECT 
+    * 
+FROMlab2.raw_data.stock_price
+) select
+    id as unique_field,
+    count(*) as n_records
+
+from __dbt__cte__stock_price
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m19:03:02.712140 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:03:03.630588 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b85b57-0003-4bef-0003-437a0002e4e6
+[0m19:03:03.632366 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 13 at position 0 unexpected 'FROMlab2'.
+syntax error line 16 at position 9 unexpected '('.
+syntax error line 26 at position 4 unexpected ')'.
+[0m19:03:03.633839 [debug] [Thread-1 (]: On test.l2.unique_stock_price_id.d7c6f6d1d3: Close
+[0m19:03:03.867489 [debug] [Thread-1 (]: Database Error in test unique_stock_price_id (models/schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 0 unexpected 'FROMlab2'.
+  syntax error line 16 at position 9 unexpected '('.
+  syntax error line 26 at position 4 unexpected ')'.
+  compiled code at target/run/l2/models/schema.yml/unique_stock_price_id.sql
+[0m19:03:03.868910 [error] [Thread-1 (]: 2 of 2 ERROR unique_stock_price_id ............................................. [[31mERROR[0m in 1.17s]
+[0m19:03:03.869947 [debug] [Thread-1 (]: Finished running node test.l2.unique_stock_price_id.d7c6f6d1d3
+[0m19:03:03.871996 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:03:03.872393 [debug] [MainThread]: Connection 'test.l2.unique_stock_price_id.d7c6f6d1d3' was properly closed.
+[0m19:03:03.872816 [info ] [MainThread]: 
+[0m19:03:03.873271 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 4.27 seconds (4.27s).
+[0m19:03:03.874239 [debug] [MainThread]: Command end result
+[0m19:03:03.900937 [info ] [MainThread]: 
+[0m19:03:03.901327 [info ] [MainThread]: [31mCompleted with 2 errors and 0 warnings:[0m
+[0m19:03:03.901526 [info ] [MainThread]: 
+[0m19:03:03.901758 [error] [MainThread]:   Database Error in test not_null_stock_price_id (models/schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 0 unexpected 'FROMlab2'.
+  syntax error line 23 at position 4 unexpected ')'.
+  compiled code at target/run/l2/models/schema.yml/not_null_stock_price_id.sql
+[0m19:03:03.901938 [info ] [MainThread]: 
+[0m19:03:03.902136 [error] [MainThread]:   Database Error in test unique_stock_price_id (models/schema.yml)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 0 unexpected 'FROMlab2'.
+  syntax error line 16 at position 9 unexpected '('.
+  syntax error line 26 at position 4 unexpected ')'.
+  compiled code at target/run/l2/models/schema.yml/unique_stock_price_id.sql
+[0m19:03:03.902305 [info ] [MainThread]: 
+[0m19:03:03.902486 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=0 TOTAL=2
+[0m19:03:03.903944 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 4.98487, "process_user_time": 1.73208, "process_kernel_time": 2.621764, "process_mem_max_rss": "205619200", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:03:03.904253 [debug] [MainThread]: Command `dbt test` failed at 19:03:03.904202 after 4.99 seconds
+[0m19:03:03.904478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a79940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f69550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10898b620>]}
+[0m19:03:03.904676 [debug] [MainThread]: Flushing usage events
+[0m19:03:47.899002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10653d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f25100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f24e90>]}
+
+
+============================== 19:03:47.900262 | 14b7c4f7-5ce3-4210-8fb2-97407b75ea5c ==============================
+[0m19:03:47.900262 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:03:47.900523 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/Users/drashtibhingradiya/.dbt', 'warn_error': 'None', 'debug': 'False', 'invocation_command': 'dbt test', 'static_parser': 'True', 'empty': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'log_path': '/Users/drashtibhingradiya/Desktop/LAB2/l2/logs', 'use_colors': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'version_check': 'True', 'no_print': 'None', 'log_format': 'default', 'partial_parse': 'True', 'fail_fast': 'False'}
+[0m19:03:48.353785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13c65bda0>]}
+[0m19:03:48.370529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c32e10>]}
+[0m19:03:48.370843 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m19:03:48.378420 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:03:48.434587 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:03:48.434907 [debug] [MainThread]: Partial parsing: updated file: l2://models/schema.yml
+[0m19:03:48.563407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c0dec00>]}
+[0m19:03:48.604016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c373860>]}
+[0m19:03:48.604225 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 3 sources, 459 macros
+[0m19:03:48.604364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c03e330>]}
+[0m19:03:48.605000 [info ] [MainThread]: 
+[0m19:03:48.605236 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:03:48.606796 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2_snapshot'
+[0m19:03:48.643909 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m19:03:48.644131 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m19:03:48.644236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:03:49.506569 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.862 seconds
+[0m19:03:49.510199 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m19:03:49.708191 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now list_lab2_analytics)
+[0m19:03:49.713482 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m19:03:49.713978 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m19:03:49.714342 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:03:50.378710 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.664 seconds
+[0m19:03:50.383574 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m19:03:50.615183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14b7c4f7-5ce3-4210-8fb2-97407b75ea5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c03e930>]}
+[0m19:03:50.616458 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:03:50.617056 [info ] [MainThread]: 
+[0m19:03:50.621045 [debug] [Thread-1 (]: Began running node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m19:03:50.621768 [info ] [Thread-1 (]: 1 of 2 START test not_null_stock_price_avg_id .................................. [RUN]
+[0m19:03:50.622467 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_analytics, now test.l2.not_null_stock_price_avg_id.467be61cf2)
+[0m19:03:50.622928 [debug] [Thread-1 (]: Began compiling node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m19:03:50.640582 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m19:03:50.641394 [debug] [Thread-1 (]: Began executing node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m19:03:50.654107 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m19:03:50.654798 [debug] [Thread-1 (]: Using snowflake connection "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m19:03:50.655023 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_avg_id.467be61cf2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "test.l2.not_null_stock_price_avg_id.467be61cf2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from lab2.analytics.stock_price_avg
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:03:50.655215 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:03:52.682153 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.026 seconds
+[0m19:03:52.697394 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_avg_id.467be61cf2: Close
+[0m19:03:52.882447 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stock_price_avg_id ........................................ [[32mPASS[0m in 2.26s]
+[0m19:03:52.883335 [debug] [Thread-1 (]: Finished running node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m19:03:52.883832 [debug] [Thread-1 (]: Began running node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m19:03:52.884354 [info ] [Thread-1 (]: 2 of 2 START test unique_stock_price_avg_id .................................... [RUN]
+[0m19:03:52.884867 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.l2.not_null_stock_price_avg_id.467be61cf2, now test.l2.unique_stock_price_avg_id.3b883b8f12)
+[0m19:03:52.885227 [debug] [Thread-1 (]: Began compiling node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m19:03:52.892578 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m19:03:52.893230 [debug] [Thread-1 (]: Began executing node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m19:03:52.894896 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m19:03:52.895692 [debug] [Thread-1 (]: Using snowflake connection "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m19:03:52.895975 [debug] [Thread-1 (]: On test.l2.unique_stock_price_avg_id.3b883b8f12: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "dev", "node_id": "test.l2.unique_stock_price_avg_id.3b883b8f12"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from lab2.analytics.stock_price_avg
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m19:03:52.896225 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:03:53.706731 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.810 seconds
+[0m19:03:53.711091 [debug] [Thread-1 (]: On test.l2.unique_stock_price_avg_id.3b883b8f12: Close
+[0m19:03:53.885331 [info ] [Thread-1 (]: 2 of 2 PASS unique_stock_price_avg_id .......................................... [[32mPASS[0m in 1.00s]
+[0m19:03:53.886521 [debug] [Thread-1 (]: Finished running node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m19:03:53.888441 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:03:53.888851 [debug] [MainThread]: Connection 'test.l2.unique_stock_price_avg_id.3b883b8f12' was properly closed.
+[0m19:03:53.889245 [info ] [MainThread]: 
+[0m19:03:53.889629 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 5.28 seconds (5.28s).
+[0m19:03:53.890484 [debug] [MainThread]: Command end result
+[0m19:03:53.914120 [info ] [MainThread]: 
+[0m19:03:53.914474 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:03:53.914672 [info ] [MainThread]: 
+[0m19:03:53.914872 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m19:03:53.916226 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 6.0375347, "process_user_time": 1.954652, "process_kernel_time": 2.412279, "process_mem_max_rss": "208404480", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:03:53.916544 [debug] [MainThread]: Command `dbt test` succeeded at 19:03:53.916487 after 6.04 seconds
+[0m19:03:53.916773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10693fbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c01b620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14c018fb0>]}
+[0m19:03:53.916972 [debug] [MainThread]: Flushing usage events
+[0m05:05:44.023850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa555b140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5612780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5dc6e40>]}
+
+
+============================== 05:05:44.038371 | c82bada7-11e6-4a52-8638-718d5caaf9be ==============================
+[0m05:05:44.038371 [info ] [MainThread]: Running with dbt=1.8.7
+[0m05:05:44.038909 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/dbt/logs', 'profiles_dir': '/opt/airflow/dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt --project-dir /opt/airflow/dbt', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:05:44.604192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81a2e930>]}
+[0m05:05:44.623657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa46c6f60>]}
+[0m05:05:44.624191 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:05:44.664895 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m05:05:44.709465 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m05:05:44.709997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa55be270>]}
+[0m05:05:45.206479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa3e30>]}
+[0m05:05:45.304279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff807cfc50>]}
+[0m05:05:45.304582 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 3 sources, 459 macros
+[0m05:05:45.304938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80f58fb0>]}
+[0m05:05:45.305729 [info ] [MainThread]: 
+[0m05:05:45.306074 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m05:05:45.307862 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m05:05:45.313818 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m05:05:45.314064 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m05:05:45.314290 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:05:46.424519 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.110 seconds
+[0m05:05:46.427870 [debug] [ThreadPool]: On list_lab2: Close
+[0m05:05:46.601779 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_analytics)
+[0m05:05:46.614217 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m05:05:46.615053 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m05:05:46.615506 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:05:47.329642 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.714 seconds
+[0m05:05:47.334521 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m05:05:47.530003 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_analytics, now list_lab2_snapshot)
+[0m05:05:47.534211 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m05:05:47.534827 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m05:05:47.535356 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:05:48.335336 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.800 seconds
+[0m05:05:48.339979 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m05:05:48.504378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5e79550>]}
+[0m05:05:48.506369 [info ] [MainThread]: Concurrency: 1 threads (target='lab2')
+[0m05:05:48.508289 [info ] [MainThread]: 
+[0m05:05:48.522269 [debug] [Thread-1 (]: Began running node model.l2.stock_price
+[0m05:05:48.523125 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now model.l2.stock_price)
+[0m05:05:48.523664 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price
+[0m05:05:48.532580 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price"
+[0m05:05:48.536052 [debug] [Thread-1 (]: Finished running node model.l2.stock_price
+[0m05:05:48.536587 [debug] [Thread-1 (]: Began running node model.l2.stock_price_RSI
+[0m05:05:48.537139 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.stock_price_RSI ......................... [RUN]
+[0m05:05:48.537955 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price, now model.l2.stock_price_RSI)
+[0m05:05:48.538315 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_RSI
+[0m05:05:48.539561 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_RSI"
+[0m05:05:48.540880 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_RSI
+[0m05:05:48.558044 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_RSI"
+[0m05:05:48.559943 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_RSI"
+[0m05:05:48.560239 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "model.l2.stock_price_RSI"} */
+create or replace transient table lab2.analytics.stock_price_RSI
+         as
+        (WITH stock_changes AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        CLOSE - LAG(CLOSE, 1) OVER (PARTITION BY SYMBOL ORDER BY DATE) AS change
+    FROM lab2.raw_data.STOCK_PRICE
+),
+
+gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        CASE WHEN change > 0 THEN change ELSE 0 END AS gain,
+        CASE WHEN change < 0 THEN ABS(change) ELSE 0 END AS loss
+    FROM stock_changes
+),
+
+average_gains_losses AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP,
+        MAX(TIMESTAMP) OVER (PARTITION BY SYMBOL) AS max_timestamp,
+        ROW_NUMBER() OVER (ORDER BY SYMBOL, DATE) AS id,
+        AVG(gain) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_gain_14d,
+        AVG(loss) OVER (PARTITION BY SYMBOL ORDER BY DATE ROWS BETWEEN 13 PRECEDING AND CURRENT ROW) AS avg_loss_14d
+    FROM gains_losses
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    TIMESTAMP,
+    max_timestamp,
+    id,
+    100 - (100 / (1 + NULLIF(avg_gain_14d, 0) / NULLIF(avg_loss_14d, 0))) AS rsi_14d
+FROM average_gains_losses
+        );
+[0m05:05:48.560540 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:05:51.851834 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.291 seconds
+[0m05:05:51.881290 [debug] [Thread-1 (]: On model.l2.stock_price_RSI: Close
+[0m05:05:52.153206 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8126c290>]}
+[0m05:05:52.155535 [info ] [Thread-1 (]: 1 of 2 OK created sql table model analytics.stock_price_RSI .................... [[32mSUCCESS 1[0m in 3.61s]
+[0m05:05:52.158220 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_RSI
+[0m05:05:52.159345 [debug] [Thread-1 (]: Began running node model.l2.stock_price_avg
+[0m05:05:52.160346 [info ] [Thread-1 (]: 2 of 2 START sql table model analytics.stock_price_avg ......................... [RUN]
+[0m05:05:52.161650 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.l2.stock_price_RSI, now model.l2.stock_price_avg)
+[0m05:05:52.162400 [debug] [Thread-1 (]: Began compiling node model.l2.stock_price_avg
+[0m05:05:52.165022 [debug] [Thread-1 (]: Writing injected SQL for node "model.l2.stock_price_avg"
+[0m05:05:52.166854 [debug] [Thread-1 (]: Began executing node model.l2.stock_price_avg
+[0m05:05:52.169311 [debug] [Thread-1 (]: Writing runtime sql for node "model.l2.stock_price_avg"
+[0m05:05:52.171277 [debug] [Thread-1 (]: Using snowflake connection "model.l2.stock_price_avg"
+[0m05:05:52.171842 [debug] [Thread-1 (]: On model.l2.stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "model.l2.stock_price_avg"} */
+create or replace transient table lab2.analytics.stock_price_avg
+         as
+        (WITH stock_data AS (
+    SELECT
+        DATE,
+        SYMBOL,
+        CLOSE,
+        TIMESTAMP
+    FROM lab2.raw_data.STOCK_PRICE
+)
+
+SELECT
+    DATE,
+    SYMBOL,
+    CLOSE,
+    TIMESTAMP,
+    MAX(TIMESTAMP) OVER (PARTITION BY SYMBOL) AS max_timestamp,
+    ROW_NUMBER() OVER (ORDER BY SYMBOL, DATE) AS id,
+    AVG(CLOSE) OVER (
+        PARTITION BY SYMBOL
+        ORDER BY DATE
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS moving_avg_7d
+FROM stock_data
+        );
+[0m05:05:52.172344 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:05:54.616840 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.444 seconds
+[0m05:05:54.621917 [debug] [Thread-1 (]: On model.l2.stock_price_avg: Close
+[0m05:05:54.809697 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c82bada7-11e6-4a52-8638-718d5caaf9be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa40e0>]}
+[0m05:05:54.811919 [info ] [Thread-1 (]: 2 of 2 OK created sql table model analytics.stock_price_avg .................... [[32mSUCCESS 1[0m in 2.65s]
+[0m05:05:54.814477 [debug] [Thread-1 (]: Finished running node model.l2.stock_price_avg
+[0m05:05:54.817571 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:05:54.818281 [debug] [MainThread]: Connection 'model.l2.stock_price_avg' was properly closed.
+[0m05:05:54.818973 [info ] [MainThread]: 
+[0m05:05:54.819916 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.51 seconds (9.51s).
+[0m05:05:54.821726 [debug] [MainThread]: Command end result
+[0m05:05:54.857053 [info ] [MainThread]: 
+[0m05:05:54.857744 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:05:54.858189 [info ] [MainThread]: 
+[0m05:05:54.858587 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m05:05:54.859305 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 10.854554, "process_user_time": 3.284125, "process_kernel_time": 0.203952, "process_mem_max_rss": "217920", "process_in_blocks": "3544", "process_out_blocks": "14473"}
+[0m05:05:54.859691 [debug] [MainThread]: Command `dbt run` succeeded at 05:05:54.859630 after 10.86 seconds
+[0m05:05:54.859972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa4ea0560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa637cf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa4f2e990>]}
+[0m05:05:54.860305 [debug] [MainThread]: Flushing usage events
+[0m05:05:57.208856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c16b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e652390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c16b440>]}
+
+
+============================== 05:05:57.212019 | f504ee64-f68e-4249-a888-fc003acfe387 ==============================
+[0m05:05:57.212019 [info ] [MainThread]: Running with dbt=1.8.7
+[0m05:05:57.212538 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt test --profiles-dir /opt/airflow/dbt --project-dir /opt/airflow/dbt', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:05:57.567556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff63eabb00>]}
+[0m05:05:57.586073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6969fce0>]}
+[0m05:05:57.586533 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:05:57.625407 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m05:05:57.679403 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:05:57.679657 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:05:57.700560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c616ab0>]}
+[0m05:05:57.751941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff63870d70>]}
+[0m05:05:57.752215 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 3 sources, 459 macros
+[0m05:05:57.752619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff63db2000>]}
+[0m05:05:57.753436 [info ] [MainThread]: 
+[0m05:05:57.753802 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m05:05:57.755703 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2_analytics'
+[0m05:05:57.762892 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m05:05:57.763107 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m05:05:57.763345 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:05:58.610291 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.847 seconds
+[0m05:05:58.614808 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m05:05:58.868811 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_analytics, now list_lab2_snapshot)
+[0m05:05:58.875488 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m05:05:58.876459 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m05:05:58.877209 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:05:59.634251 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.757 seconds
+[0m05:05:59.636291 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m05:05:59.831740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f504ee64-f68e-4249-a888-fc003acfe387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8ce40e90>]}
+[0m05:05:59.832511 [info ] [MainThread]: Concurrency: 1 threads (target='lab2')
+[0m05:05:59.833238 [info ] [MainThread]: 
+[0m05:05:59.840142 [debug] [Thread-1 (]: Began running node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m05:05:59.840491 [info ] [Thread-1 (]: 1 of 2 START test not_null_stock_price_avg_id .................................. [RUN]
+[0m05:05:59.840941 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now test.l2.not_null_stock_price_avg_id.467be61cf2)
+[0m05:05:59.841178 [debug] [Thread-1 (]: Began compiling node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m05:05:59.850570 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m05:05:59.851949 [debug] [Thread-1 (]: Began executing node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m05:05:59.862348 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m05:05:59.863592 [debug] [Thread-1 (]: Using snowflake connection "test.l2.not_null_stock_price_avg_id.467be61cf2"
+[0m05:05:59.863835 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_avg_id.467be61cf2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "test.l2.not_null_stock_price_avg_id.467be61cf2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from lab2.analytics.stock_price_avg
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m05:05:59.864035 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:06:00.964288 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.100 seconds
+[0m05:06:00.976630 [debug] [Thread-1 (]: On test.l2.not_null_stock_price_avg_id.467be61cf2: Close
+[0m05:06:01.156128 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stock_price_avg_id ........................................ [[32mPASS[0m in 1.31s]
+[0m05:06:01.159161 [debug] [Thread-1 (]: Finished running node test.l2.not_null_stock_price_avg_id.467be61cf2
+[0m05:06:01.160540 [debug] [Thread-1 (]: Began running node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m05:06:01.161447 [info ] [Thread-1 (]: 2 of 2 START test unique_stock_price_avg_id .................................... [RUN]
+[0m05:06:01.162628 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.l2.not_null_stock_price_avg_id.467be61cf2, now test.l2.unique_stock_price_avg_id.3b883b8f12)
+[0m05:06:01.163404 [debug] [Thread-1 (]: Began compiling node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m05:06:01.173361 [debug] [Thread-1 (]: Writing injected SQL for node "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m05:06:01.176494 [debug] [Thread-1 (]: Began executing node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m05:06:01.178898 [debug] [Thread-1 (]: Writing runtime sql for node "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m05:06:01.180655 [debug] [Thread-1 (]: Using snowflake connection "test.l2.unique_stock_price_avg_id.3b883b8f12"
+[0m05:06:01.181118 [debug] [Thread-1 (]: On test.l2.unique_stock_price_avg_id.3b883b8f12: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "test.l2.unique_stock_price_avg_id.3b883b8f12"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from lab2.analytics.stock_price_avg
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m05:06:01.181506 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:06:02.497059 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.316 seconds
+[0m05:06:02.498124 [debug] [Thread-1 (]: On test.l2.unique_stock_price_avg_id.3b883b8f12: Close
+[0m05:06:02.988471 [info ] [Thread-1 (]: 2 of 2 PASS unique_stock_price_avg_id .......................................... [[32mPASS[0m in 1.82s]
+[0m05:06:02.992057 [debug] [Thread-1 (]: Finished running node test.l2.unique_stock_price_avg_id.3b883b8f12
+[0m05:06:02.995336 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:06:02.996203 [debug] [MainThread]: Connection 'test.l2.unique_stock_price_avg_id.3b883b8f12' was properly closed.
+[0m05:06:02.997062 [info ] [MainThread]: 
+[0m05:06:02.998298 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 5.24 seconds (5.24s).
+[0m05:06:02.999751 [debug] [MainThread]: Command end result
+[0m05:06:03.031658 [info ] [MainThread]: 
+[0m05:06:03.032172 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:06:03.032605 [info ] [MainThread]: 
+[0m05:06:03.032900 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m05:06:03.033513 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.8593016, "process_user_time": 2.392933, "process_kernel_time": 0.090581, "process_mem_max_rss": "209152", "process_out_blocks": "1856", "process_in_blocks": "0"}
+[0m05:06:03.033848 [debug] [MainThread]: Command `dbt test` succeeded at 05:06:03.033793 after 5.86 seconds
+[0m05:06:03.034099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e652390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff685e4c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b4a41d0>]}
+[0m05:06:03.034358 [debug] [MainThread]: Flushing usage events
+[0m05:06:05.434563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8dad8470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d379f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8dad96a0>]}
+
+
+============================== 05:06:05.437660 | 3772ceb0-d74d-4dd2-b3c8-66a0e34736fb ==============================
+[0m05:06:05.437660 [info ] [MainThread]: Running with dbt=1.8.7
+[0m05:06:05.438173 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt snapshot --profiles-dir /opt/airflow/dbt --project-dir /opt/airflow/dbt', 'send_anonymous_usage_stats': 'True'}
+[0m05:06:05.779322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69f6c290>]}
+[0m05:06:05.798856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8eadb5c0>]}
+[0m05:06:05.799360 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:06:05.838416 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m05:06:05.893327 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:06:05.893611 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:06:05.914389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69a73380>]}
+[0m05:06:05.960708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff695efaa0>]}
+[0m05:06:05.960982 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 3 sources, 459 macros
+[0m05:06:05.961340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff695e7770>]}
+[0m05:06:05.962090 [info ] [MainThread]: 
+[0m05:06:05.962433 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m05:06:05.962890 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_lab2'
+[0m05:06:05.969056 [debug] [ThreadPool]: Using snowflake connection "list_lab2"
+[0m05:06:05.969283 [debug] [ThreadPool]: On list_lab2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2"} */
+show terse schemas in database lab2
+    limit 10000
+[0m05:06:05.969482 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:06:06.899045 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.930 seconds
+[0m05:06:06.899987 [debug] [ThreadPool]: On list_lab2: Close
+[0m05:06:07.173258 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2, now list_lab2_analytics)
+[0m05:06:07.177283 [debug] [ThreadPool]: Using snowflake connection "list_lab2_analytics"
+[0m05:06:07.177562 [debug] [ThreadPool]: On list_lab2_analytics: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_analytics"} */
+show objects in lab2.analytics limit 10000
+[0m05:06:07.177824 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:06:08.381876 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.204 seconds
+[0m05:06:08.386938 [debug] [ThreadPool]: On list_lab2_analytics: Close
+[0m05:06:08.572947 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab2_analytics, now list_lab2_snapshot)
+[0m05:06:08.579471 [debug] [ThreadPool]: Using snowflake connection "list_lab2_snapshot"
+[0m05:06:08.580403 [debug] [ThreadPool]: On list_lab2_snapshot: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "connection_name": "list_lab2_snapshot"} */
+show objects in lab2.snapshot limit 10000
+[0m05:06:08.581285 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:06:09.310811 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.729 seconds
+[0m05:06:09.313882 [debug] [ThreadPool]: On list_lab2_snapshot: Close
+[0m05:06:09.462710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69a16360>]}
+[0m05:06:09.464753 [info ] [MainThread]: Concurrency: 1 threads (target='lab2')
+[0m05:06:09.466582 [info ] [MainThread]: 
+[0m05:06:09.479782 [debug] [Thread-1 (]: Began running node snapshot.l2.snapshot_stock_price_avg
+[0m05:06:09.480596 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_stock_price_avg ........................ [RUN]
+[0m05:06:09.481522 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab2_snapshot, now snapshot.l2.snapshot_stock_price_avg)
+[0m05:06:09.482003 [debug] [Thread-1 (]: Began compiling node snapshot.l2.snapshot_stock_price_avg
+[0m05:06:09.489316 [debug] [Thread-1 (]: Began executing node snapshot.l2.snapshot_stock_price_avg
+[0m05:06:09.520272 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:09.520635 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG"
+[0m05:06:09.520934 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:06:10.228676 [debug] [Thread-1 (]: SQL status: SUCCESS 11 in 0.708 seconds
+[0m05:06:10.257269 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:10.257698 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+create or replace temporary table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG__dbt_tmp"
+         as
+        (
+
+    with snapshot_query as (
+
+        
+
+  
+
+SELECT * FROM lab2.analytics.stock_price_avg
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+
+        from "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+,
+            timestamp as dbt_updated_at,
+            timestamp as dbt_valid_from,
+            
+  
+  coalesce(nullif(timestamp, timestamp), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(id as varchar ), '')
+         || '|' || coalesce(cast(timestamp as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+,
+            timestamp as dbt_updated_at,
+            timestamp as dbt_valid_from,
+            timestamp as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and ((snapshotted_data.dbt_valid_from < source_data.timestamp))
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.timestamp)
+        )
+    ),
+
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+
+        from snapshotted_data
+        left join deletes_source_data as source_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        source_data.dbt_unique_key is null
+    
+
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+        );
+[0m05:06:12.227215 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.969 seconds
+[0m05:06:12.233917 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:12.235094 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG__dbt_tmp"
+[0m05:06:12.418381 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.182 seconds
+[0m05:06:12.425096 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:12.426382 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG"
+[0m05:06:12.588351 [debug] [Thread-1 (]: SQL status: SUCCESS 11 in 0.161 seconds
+[0m05:06:12.595964 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:12.596925 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG__dbt_tmp"
+[0m05:06:12.746358 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.148 seconds
+[0m05:06:12.752602 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:12.753672 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG"
+[0m05:06:13.048703 [debug] [Thread-1 (]: SQL status: SUCCESS 11 in 0.294 seconds
+[0m05:06:13.062270 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:13.063050 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+describe table "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG__dbt_tmp"
+[0m05:06:13.350365 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.287 seconds
+[0m05:06:13.366636 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:13.367114 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+select * from (
+        
+
+    with snapshot_query as (
+
+        
+
+  
+
+SELECT * FROM lab2.analytics.stock_price_avg
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+
+        from "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+,
+            timestamp as dbt_updated_at,
+            timestamp as dbt_valid_from,
+            
+  
+  coalesce(nullif(timestamp, timestamp), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(id as varchar ), '')
+         || '|' || coalesce(cast(timestamp as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+,
+            timestamp as dbt_updated_at,
+            timestamp as dbt_valid_from,
+            timestamp as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select *, 
+    
+        id as dbt_unique_key
+    
+
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and ((snapshotted_data.dbt_valid_from < source_data.timestamp))
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.timestamp)
+        )
+    ),
+
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+
+        from snapshotted_data
+        left join deletes_source_data as source_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        source_data.dbt_unique_key is null
+    
+
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m05:06:14.682811 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 1.315 seconds
+[0m05:06:14.686508 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:14.686984 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m05:06:14.889658 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.202 seconds
+[0m05:06:14.892134 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:14.899342 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:14.900331 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+BEGIN
+[0m05:06:15.049110 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.148 seconds
+[0m05:06:15.050663 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:15.051688 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+merge into "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG" as DBT_INTERNAL_DEST
+    using "LAB2"."SNAPSHOT"."SNAPSHOT_STOCK_PRICE_AVG__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("DATE", "SYMBOL", "CLOSE", "TIMESTAMP", "MAX_TIMESTAMP", "ID", "MOVING_AVG_7D", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("DATE", "SYMBOL", "CLOSE", "TIMESTAMP", "MAX_TIMESTAMP", "ID", "MOVING_AVG_7D", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+;
+[0m05:06:15.814726 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.761 seconds
+[0m05:06:15.816551 [debug] [Thread-1 (]: Using snowflake connection "snapshot.l2.snapshot_stock_price_avg"
+[0m05:06:15.817618 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "l2", "target_name": "lab2", "node_id": "snapshot.l2.snapshot_stock_price_avg"} */
+COMMIT
+[0m05:06:16.323688 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.505 seconds
+[0m05:06:16.351587 [debug] [Thread-1 (]: On snapshot.l2.snapshot_stock_price_avg: Close
+[0m05:06:16.615167 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3772ceb0-d74d-4dd2-b3c8-66a0e34736fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69c24200>]}
+[0m05:06:16.617285 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshot.snapshot_stock_price_avg ........................ [[32mSUCCESS 0[0m in 7.13s]
+[0m05:06:16.619198 [debug] [Thread-1 (]: Finished running node snapshot.l2.snapshot_stock_price_avg
+[0m05:06:16.621382 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:06:16.621925 [debug] [MainThread]: Connection 'snapshot.l2.snapshot_stock_price_avg' was properly closed.
+[0m05:06:16.622407 [info ] [MainThread]: 
+[0m05:06:16.623114 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 10.66 seconds (10.66s).
+[0m05:06:16.624098 [debug] [MainThread]: Command end result
+[0m05:06:16.655466 [info ] [MainThread]: 
+[0m05:06:16.656130 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:06:16.656512 [info ] [MainThread]: 
+[0m05:06:16.656745 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m05:06:16.657421 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 11.256712, "process_user_time": 2.525157, "process_kernel_time": 0.10835, "process_mem_max_rss": "209148", "process_out_blocks": "1873", "process_in_blocks": "0"}
+[0m05:06:16.657790 [debug] [MainThread]: Command `dbt snapshot` succeeded at 05:06:16.657706 after 11.26 seconds
+[0m05:06:16.658076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d28f860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d62e690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d62f110>]}
+[0m05:06:16.658306 [debug] [MainThread]: Flushing usage events

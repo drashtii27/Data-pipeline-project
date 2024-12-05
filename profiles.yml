@@ -1,0 +1,13 @@
+dw_project:
+  outputs:
+    default:
+      type: snowflake
+      account: "MWXXFJX-HP43653"         # Replace with your Snowflake account
+      user: "drashti27"               # Replace with your Snowflake username
+      password: "cybgu0-gofjIh-kobkev"       # Replace with your Snowflake password
+      role: "ACCOUNTADMIN"               # Replace with your Snowflake role
+      database: "lab2"        # Replace with your Snowflake database name
+      warehouse: "dw"     # Replace with your Snowflake warehouse name
+      schema: analytics
+      threads: 1
+  target: default

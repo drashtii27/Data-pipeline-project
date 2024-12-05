@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: bitcoin_historical
+    description: "Historical Bitcoin price data with timestamp periods"
+    columns:
+      - name: TIME_PERIOD_START
+        description: "Start timestamp of the price period"
+        data_tests:
+          - unique
+          - not_null
+        data_type: TIMESTAMP_NTZ(9)
+
+      - name: TIME_PERIOD_END
+        description: "End timestamp of the price period"
+        data_tests:
+          - not_null
+        data_type: TIMESTAMP_NTZ(9)
+
+      - name: TIME_OPEN
+        description: "Opening time of the trading period"
+        data_tests:
+          - not_null
+        data_type: TIMESTAMP_NTZ(9)
+
+      - name: TIME_CLOSE
+        description: "Closing time of the trading period"
+        data_tests:
+          - not_null
+        data_type: TIMESTAMP_NTZ(9)
+
+      - name: PRICE_OPEN
+        description: "Opening price for the period"
+        data_tests:
+          - not_null
+        data_type: FLOAT
+
+      - name: PRICE_HIGH
+        description: "Highest price during the period"
+        data_tests:
+          - not_null
+        data_type: FLOAT
+
+      - name: PRICE_LOW
+        description: "Lowest price during the period"
+        data_tests:
+          - not_null
+        data_type: FLOAT

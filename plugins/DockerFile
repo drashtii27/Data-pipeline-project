@@ -1,0 +1,9 @@
+FROM apache/airflow:2.9.1
+
+# Install packages as root first
+RUN pip install statsmodels pandas numpy
+
+# Then switch to non-root user if needed
+USER airflow
+
+WORKDIR /opt/airflow

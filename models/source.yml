@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: lab2
+    schema: raw_data
+    description: "Schema which stores raw bitcoin data"
+    tables:
+      - name: bitcoin_historical
+        identifier: bitcoin_historical
+        description: "Historical bitcoin price and trading data"
+      
+      - name: bitcoin_realtime
+        identifier: bitcoin_realtime
+        description: "Real-time bitcoin price and trading data"
+
+  - name: analytics
+    database: lab2
+    schema: analytics
+    description: "Schema which stores analyzed bitcoin data"
+    tables:
+      - name: bitcoin_summary
+        identifier: bitcoin_summary
+        description: "Aggregated bitcoin trading analysis and metrics"

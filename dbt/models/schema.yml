@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: stock_price_avg
+    description: "Analytics model for alpha_vantage_stock_price"
+    columns:
+      - name: id
+        description: "Unique identifier for each stock price record"
+        data_tests:
+          - unique
+          - not_null
